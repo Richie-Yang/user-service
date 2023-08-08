@@ -1,0 +1,19 @@
+# @name login
+POST {{endpoint}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "xxx@abc.com",
+    "password": "123"
+}
+###
+
+# @name logout
+POST {{endpoint}}/auth/logout
+Content-Type: application/json
+
+{
+    "id": "n0wq8aevqbeo",
+    "token": "v4BnU7JEhoR7sDnOCTiBR0c4Ha9oXGYf"
+}
+###

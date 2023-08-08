@@ -1,0 +1,41 @@
+# @name createUser
+POST {{endpoint}}/users
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "xxx@abc.com",
+    "password": "123",
+    "role": ["admin"]
+}
+###
+@updateUserId = ga9zf0nglba0
+# @name updateUserById
+PATCH {{endpoint}}/users/{{updateUserId}}
+Content-Type: application/json
+
+{
+    "name": "John Doe 456",
+    "email": "xxx@abc.com"
+}
+###
+#
+@findUserId = fgdx83dob4lu
+# @name getUserById
+GET {{endpoint}}/users/{{findUserId}}
+Content-Type: application/json
+
+###
+# @name getUsers
+GET {{endpoint}}/users
+Content-Type: application/json
+
+###
+# @name getUsersWithFilter
+GET {{endpoint}}/users
+?filter={"where":{"name":"John"}, "size": 1, "page": {}}
+Content-Type: application/json
+
+###
+
+
